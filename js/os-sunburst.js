@@ -38,7 +38,7 @@ OpenSpending.sunburst= function(config) {
       .attr("d", arc)
       .attr("class","arc")
       .style("stroke", "#fff")
-      .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+      .style("fill", function(d) { return color((d.children.length ? d : d.parent).name); })
       .style("fill-rule", "evenodd");
     
       d3.selectAll(".arc")
