@@ -43,7 +43,7 @@ OpenSpending.sunburst= function(config) {
     
       d3.selectAll(".arc")
           .append("title")
-          .text(function(d) {return d.label+" - "+d.amount+tree.currency})
+          .text(function(d) {return d.label+" - "+(d.amount/tree.amount*100).toPrecision(2)+"%"})
 
         
 
